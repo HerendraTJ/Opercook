@@ -1,20 +1,21 @@
 #include <stdio.h>
 #include "EXTRA/EXTRA.h"
 
-void inputName()
+const char * inputName()
 {
-    char name[5005];
+    static char name[5005];
     int ctrName;
     do
     {
         printf("Input the name [at least 5 characters]: ");
         scanf("%[^\n]", name);
         getchar();
-        ctrName = strctr(name);
+        ctrName = strlen(name);
     } while (ctrName < 5 || ctrName > 5000);
+    return name; //Utk masuk ke array char destinasi, strcpy(a, inputName());
 }
 
-void inputPrice()
+int inputPrice()
 {
     int price;
     do
@@ -22,4 +23,8 @@ void inputPrice()
         printf("Input the price [10 - 500]: $ ");
         scanf("%d", &price);
     } while (price < 10 || price > 500);
+    return price;
+
+    
+    
 }
