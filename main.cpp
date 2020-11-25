@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
+#include "src/Menu1.cpp"
+#include "src/Process.cpp"
+#include "src/ViewOrder.cpp"
 
 int main() {
     printf("Welcome to Opercook\n");
@@ -15,16 +18,18 @@ int main() {
     scanf("%d", &inputMain);
     switch (inputMain) {
         case 1:
-
+        	void addDessert();
+        	void addDrink();
             break;
         case 2:
-
+        	void CookingProcess();
+        	
             break;
         case 3:
-
+        	void ViewOrder();
             break;
         case 4:
-
+        	return 0;
             break;
         default:
 
